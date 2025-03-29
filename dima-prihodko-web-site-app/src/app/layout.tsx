@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
-
+import SocialNetworkAndMessagers from "./components/custom/SocialNetworkAndMessagers";
 export const metadata: Metadata = {
   title: "Create Next App",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,6 +19,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SocialNetworkAndMessagers></SocialNetworkAndMessagers>
           {children}
         </ThemeProvider>
       </body>
